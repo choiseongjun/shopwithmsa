@@ -11,12 +11,12 @@ spring:
 #      httpclient:
 #        connect-timeout: 2000
 #        response-timeout: 2s
-      mvc:
-        routes:
-          - id: admin-service
-            uri: lb://ADMIN-SERVICE
-            predicates:
-              - Path=/admin-service/**
+#      mvc:
+      routes:
+        - id: admin-service
+          uri: lb://ADMIN-SERVICE
+          predicates:
+            - Path=/admin-service/**
   #          filters:
   #            - RewritePath=/admin-service/(?<path>.*), /$\{path}
 
