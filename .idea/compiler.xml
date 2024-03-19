@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="admin-service" target="21" />
+      <module name="admin-service.main" target="21" />
+      <module name="admin-service.test" target="21" />
+      <module name="eureka-server" target="21" />
+      <module name="eureka-server.main" target="21" />
+      <module name="eureka-server.test" target="21" />
+      <module name="eurekaserver" target="21" />
+      <module name="gate" target="21" />
+      <module name="gate.main" target="21" />
+      <module name="gate.test" target="21" />
+      <module name="gatewaycloud" target="21" />
+      <module name="gatewaycloud.main" target="21" />
+      <module name="gatewaycloud.test" target="21" />
+      <module name="scg" target="21" />
+      <module name="scg.main" target="21" />
+      <module name="scg.test" target="21" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,31 @@
+server:
+  port: 8000
+  application:
+    name: apigateway-service
+
+spring:
+  application:
+    name: apigateway-service
+  cloud:
+    gateway:
+#      httpclient:
+#        connect-timeout: 2000
+#        response-timeout: 2s
+      mvc:
+        routes:
+          - id: admin-service
+            uri: lb://ADMIN-SERVICE
+            predicates:
+              - Path=/admin-service/**
+  #          filters:
+  #            - RewritePath=/admin-service/(?<path>.*), /$\{path}
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defalutZone: http://localhost:8761/eureka
+  instance:
+    instance-id: ${spring.cloud.client.hostname}:${spring.application.instance_id:${random.value}}
+
