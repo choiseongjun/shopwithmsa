@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-service.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-service.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-service.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/admin-service.test.iml" filepath="$PROJECT_DIR$/.idea/modules/admin-service.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eureka-server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/eureka-server.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scg.iml" filepath="$PROJECT_DIR$/.idea/modules/scg.iml" />
+      <module fileurl="file://$PROJECT_DIR$/user-service/src/main/main.iml" filepath="$PROJECT_DIR$/user-service/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/main.user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/main.user-service.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/scg.main.iml" filepath="$PROJECT_DIR$/.idea/modules/scg.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/scg.test.iml" filepath="$PROJECT_DIR$/.idea/modules/scg.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/test12.iml" filepath="$PROJECT_DIR$/test12.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/user-service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/user-service.main.iml" />
     </modules>
   </component>
 </project>

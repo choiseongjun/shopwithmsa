@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Gradle Imported" enabled="true">
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.30/f195ee86e6c896ea47a1d39defbe20eb59cd149d/lombok-1.18.30.jar" />
+        </processorPath>
+        <module name="user-service.test" />
+        <module name="user-service.main" />
+      </profile>
+    </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="admin-service" target="21" />
-      <module name="admin-service.main" target="21" />
-      <module name="admin-service.test" target="21" />
-      <module name="eureka-server" target="21" />
-      <module name="eureka-server.main" target="21" />
-      <module name="eureka-server.test" target="21" />
       <module name="eurekaserver" target="21" />
       <module name="gate" target="21" />
       <module name="gate.main" target="21" />
@@ -15,9 +19,6 @@
       <module name="gatewaycloud" target="21" />
       <module name="gatewaycloud.main" target="21" />
       <module name="gatewaycloud.test" target="21" />
-      <module name="scg" target="21" />
-      <module name="scg.main" target="21" />
-      <module name="scg.test" target="21" />
     </bytecodeTargetLevel>
   </component>
 </project>

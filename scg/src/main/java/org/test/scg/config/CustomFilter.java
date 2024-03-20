@@ -1,5 +1,6 @@
 package org.test.scg.config;
 
+
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.factory.AbstractGatewayFilterFactory;
@@ -19,11 +20,11 @@ public class CustomFilter extends AbstractGatewayFilterFactory<CustomFilter.Conf
             ServerHttpRequest request = exchange.getRequest();
             ServerHttpResponse response = exchange.getResponse();
 
-//            log.info("Custom Pre filter: request id -> {}", request.getId());
+            log.info("Custom Pre filter: request id -> {}", request.getId());
 
             //Custom Post Filter
             return chain.filter(exchange).then(Mono.fromRunnable(()->{
-//                log.info("Custom Post filter: response code -> {}", response.getStatusCode());
+                log.info("Custom Post filter: response code -> {}", response.getStatusCode());
             }));
         };
     }

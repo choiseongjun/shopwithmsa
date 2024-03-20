@@ -17,7 +17,17 @@ spring:
           uri: lb://ADMIN-SERVICE
           predicates:
             - Path=/admin-service/**
-  #          filters:
+          filters:
+            - CustomFilter
+            - RewritePath=/admin-service/(?<segment>.*), /$\{segment}
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/user-service/**
+          filters:
+            - RemoveRequestHeader=Cookie
+            - RewritePath=/user-service/(?<segment>.*), /$\{segment}
+#            - CustomFilter
   #            - RewritePath=/admin-service/(?<path>.*), /$\{path}
 
 eureka:
