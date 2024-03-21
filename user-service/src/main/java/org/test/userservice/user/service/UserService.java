@@ -1,12 +1,15 @@
 package org.test.userservice.user.service;
 
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.stereotype.Service;
 import org.test.userservice.user.dto.req.RequestLoginUserDto;
-import org.test.userservice.user.dto.res.UserDto;
+import org.test.userservice.user.dto.req.UserRequestDto;
+import org.test.userservice.user.dto.res.UserResponseDto;
 
-public interface UserService extends UserDetailsService {
+public interface UserService  {
     RequestLoginUserDto createUser(RequestLoginUserDto requestLoginUserDto);
 
-    UserDto getUserByUserId(String userId);
+    UserResponseDto getUserByUserId(String userId);
+
+    UserResponseDto getUserDetailsByEmail(String email);
+
+    UserResponseDto saveUser(UserRequestDto userRequest);
 }

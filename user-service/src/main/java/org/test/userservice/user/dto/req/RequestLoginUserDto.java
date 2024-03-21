@@ -17,11 +17,11 @@ import java.io.Serializable;
 @NoArgsConstructor
 @AllArgsConstructor
 public class RequestLoginUserDto implements Serializable {
-    @NotNull(message = "이메일은 null이면 안됩니다.")
-    @Size(min=1,message = "최소 1자이상 입력해주세요.")
+//    @NotNull(message = "이메일은 null이면 안됩니다.")
+//    @Size(min=1,message = "최소 1자이상 입력해주세요.")
 //    @Email
     String email;
-    @NotNull(message = "비밀번호는 null이면 안됩니다.")
-    @Size(min=1,message = "최소 1자이상 입력해주세요.")
+//    @NotNull(message = "비밀번호는 null이면 안됩니다.")
+//    @Size(min=1,message = "최소 1자이상 입력해주세요.")
     String password;
 }

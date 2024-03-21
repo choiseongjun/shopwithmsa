@@ -3,9 +3,14 @@ package org.test.userservice.user.entity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.test.userservice.user.dto.req.UserRequestDto;
+
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
-@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@NoArgsConstructor
+//@NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor
 @Getter
 @Setter
@@ -21,6 +26,18 @@ public class User {
     private String email;
     @Column(name = "password", nullable = false)
     private String password;
-    @Column
+    @Column(name = "nickname")
     private String nickName;
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "users_roles_connetor", joinColumns = @JoinColumn(name = "user_id", referencedColumnName = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id", referencedColumnName = "id"))
+    private Set<UserRole> roles = new HashSet<>();
+
+
+    public static User fromRequestDto(UserRequestDto userRequestDto){
+        return User.builder()
+                .email(userRequestDto.getEmail())
+                .nickName(userRequestDto.getNickName())
+                .password(userRequestDto.getPassword())
+                .build();
+    }
 }
